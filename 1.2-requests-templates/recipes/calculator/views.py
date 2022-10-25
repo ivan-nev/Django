@@ -16,8 +16,9 @@ DATA = {
         'сыр, ломтик': 1,
         'помидор, ломтик': 1,
     },
-    # можете добавить свои рецепты ;)
+    # можете добавить свои рецепты;)
 }
+
 
 # Напишите ваш обработчик. Используйте DATA как источник данных
 # Результат - render(request, 'calculator/index.html', context)
@@ -28,3 +29,20 @@ DATA = {
 #     'ингредиент2': количество2,
 #   }
 # }
+
+def recipes(request, dish):
+    context = {}
+    if dish in DATA:
+        servings = int(request.GET.get('servings', 1))
+        context['dish'] = dish
+        context['recipe'] = {ing: num * servings for ing, num in DATA.get(dish).items()}
+        print(context)
+    # else:
+    #     context = None
+    return render(request, 'calculator/index.html', context)
+
+
+def home(request):
+    dishes = list(DATA.keys())
+    context = {'dishes': dishes}
+    return render(request, template_name='calculator/home.html', context=context)
