@@ -16,8 +16,22 @@
                 Дата публикации: {{ book.pub_date }}
                 </p>
 
+
             </div>
             {% endfor %}
+
         </div>
+         <p>
+        {% if back is not None %}
+                <a href="{% url 'book' back.pub_date %}">
+                <-{{ back.pub_date }}
+                </a>
+        {% endif %}
+--
+        {% if next is not None %}
+                <a href="{% url 'book' next.pub_date %}">{{ next.pub_date }}->
+                </a>
+        {% endif %}
+                </p>
     </div>
 {% endblock %}
