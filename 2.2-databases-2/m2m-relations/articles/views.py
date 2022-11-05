@@ -5,10 +5,15 @@ from articles.models import Article
 
 def articles_list(request):
     template = 'articles/news.html'
-    context = {}
+
 
     # используйте этот параметр для упорядочивания результатов
     # https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet.order_by
-    ordering = '-published_at'
+    # ordering = '-published_at'
+    # группировка есть в самой модели
+    context = {'object_list': Article.objects.all()}
+    print(context)
+    for i in context['object_list']:
+        print(i)
 
     return render(request, template, context)
