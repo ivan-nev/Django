@@ -42,6 +42,6 @@ class TagAdmin(admin.ModelAdmin):
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
     inlines = [ArticleTagInline]
-    list_display = ['title', 'text', 'published_at', 'articletag']
+    list_display = ['title', 'text', 'published_at','image', 'articletag']
 
 
