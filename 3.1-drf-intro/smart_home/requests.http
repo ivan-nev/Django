@@ -14,7 +14,7 @@ Content-Type: application/json
 
 {
   "name": "ESP8777",
-  "description": "Датчик в ванной12"
+  "description": "Датчик в ванной11"
 }
 
 ###
@@ -24,7 +24,8 @@ PATCH {{baseUrl}}/sensors/2/
 Content-Type: application/json
 
 {
-  "description": "Снова поставил"
+  "name": "Задолбал снова",
+  "description": "Убрал"
 }
 
 ###
@@ -34,12 +35,12 @@ POST {{baseUrl}}/measurements/
 Content-Type: application/json
 
 {
-  "sensor": 2,
-  "temperature": 22.3
+  "sensor": 14,
+  "temperature": 33
 }
 
 ###
 
 # получение информации по датчику
-GET {{baseUrl}}/sensors/2/
+GET {{baseUrl}}/sensors/14/
 Content-Type: application/json

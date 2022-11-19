@@ -7,7 +7,7 @@ class Sensor(models.Model):
     description = models.CharField(max_length=80, verbose_name='Описание')
 
     class Meta:
-        ordering = ['-id']
+        ordering = ['id']
 
     def __str__(self):
         return f'{self.name} - {self.description}'
@@ -19,7 +19,7 @@ class Measurement(models.Model):
     created_at = models.DateTimeField(auto_now=True, verbose_name='Дата')
 
     class Meta:
-        ordering = ['-created_at']
+        ordering = ['created_at']
 
     def __str__(self):
         return f'{self.sensor} -- {self.temperature}'
