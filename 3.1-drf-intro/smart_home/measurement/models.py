@@ -8,7 +8,7 @@ class Sensor(models.Model):
     name = models.CharField(max_length=50, verbose_name='Датчик')
     description = models.CharField(max_length=80, verbose_name='Описание')
     foto = models.ImageField(blank=True, null=True, verbose_name='фотография')
-    # foto2 = ProcessedImageField(blank=True, null=True, verbose_name='фотография',
+    # foto = ProcessedImageField(blank=True, null=True, verbose_name='фотография',
     #                                        processors=[ResizeToFill(100, 50)],
     #                                        format='JPEG',
     #                                        options={'quality': 60})

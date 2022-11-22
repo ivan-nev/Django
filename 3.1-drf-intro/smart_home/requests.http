@@ -19,7 +19,6 @@ Content-Type: application/json
 }
 
 ###
-
 # обновление датчика
 PATCH {{baseUrl}}/sensors/2/
 Content-Type: application/json
@@ -28,10 +27,7 @@ Content-Type: application/json
   "name": "DS22",
   "description": "yyy"
 
-
-
 }
-
 ###
 
 # добавление измерения
