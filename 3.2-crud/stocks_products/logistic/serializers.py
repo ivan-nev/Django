@@ -19,7 +19,7 @@ class ProductPositionSerializer(serializers.ModelSerializer):
         fields = ['product', 'quantity', 'price']
         filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
         filterset_fields = ['title', 'description']
-        search_fields = ['title', ]
+        search_fields = ['title', 'products__title', 'products__description']
         ordering_fields = ['title']
 
 
