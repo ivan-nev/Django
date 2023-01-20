@@ -26,6 +26,7 @@ SECRET_KEY = 'z5^+-9&b+ok(d%hl!%lbft$$bd(yz$3g5cq_ch6pw5l#8+ap+-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG',cast=bool)
 
+
 ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
 
 

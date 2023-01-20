@@ -13,7 +13,8 @@ POST {{baseUrl}}/advertisements/
 Content-Type: application/json
 #Authorization: Token 4610902e34046e233a655ac96b4fde620e2c7a2b
 #Authorization: Token c98fc72fab7c088c82001ef973ab39360ad61d3c
-Authorization: Token 23054f10affb320e61a2387d177a26e67f0c8ff2
+#Authorization: Token 23054f10affb320e61a2387d177a26e67f0c8ff2
+Authorization: Token 7ca4bc7ca0d7f9f29e8f8972c8332e88afab4cb6
 
 
 {
